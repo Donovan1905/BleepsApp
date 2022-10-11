@@ -428,7 +428,7 @@ module.exports = webpackAsyncContext;
 /***/ ((module) => {
 
 "use strict";
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LnNjc3MifQ== */";
+module.exports = ".app-page {\n  position: relative;\n  width: 393px;\n  height: 852px;\n  background: rgba(255, 255, 255, 0.91);\n  -webkit-backdrop-filter: blur(2px);\n          backdrop-filter: blur(2px);\n  /* Note: backdrop-filter has minimal browser support */\n  border-radius: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0YsWUFBQTtFQUNBLGFBQUE7RUFFQSxxQ0FBQTtFQUNBLGtDQUFBO1VBQUEsMEJBQUE7RUFDQSxzREFBQTtFQUVBLG1CQUFBO0FBREYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYWdle1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIHdpZHRoOiAzOTNweDtcclxuICBoZWlnaHQ6IDg1MnB4O1xyXG5cclxuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTEpO1xyXG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cigycHgpO1xyXG4gIC8qIE5vdGU6IGJhY2tkcm9wLWZpbHRlciBoYXMgbWluaW1hbCBicm93c2VyIHN1cHBvcnQgKi9cclxuXHJcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcclxufSJdfQ== */";
 
 /***/ }),
 

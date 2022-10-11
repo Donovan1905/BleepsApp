@@ -1,9 +1,7 @@
 
   
   <ion-content [fullscreen]="true" class="home-page">
-  fall : {{ fall }} <hr>
-  idle : {{ idle }} <hr>
-  handling : {{ handling }}
+ 
 
   <div class="home-widget">
     <div class="battery-widget">
@@ -23,6 +21,11 @@
 
   <div class="bpm-div">
     <ion-icon name="pulse-outline" class="pulse-icon"></ion-icon>
+    <div style="color: black">
+      fall : {{ fall }} <hr>
+      idle : {{ idle }} <hr>
+      handling : {{ handling }}
+    </div>
   </div>
 
   <div class="nfc-div">
@@ -46,8 +49,8 @@
 
 <div *ngIf="fall && !handling">
   <div class="my-overlay">
-    <ion-card class="urgenceOver">
-      <ion-card-header>
+    <ion-card class="">
+      <ion-card-header>urgenceOver
         <ion-card-title style="color: black;">Boudette</ion-card-title>
         <ion-card-subtitle>Chute a 16:45</ion-card-subtitle>
       </ion-card-header>
