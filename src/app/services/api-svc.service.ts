@@ -18,8 +18,14 @@ export class ApiSvcService {
   constructor(private httpClient: HttpClient) { }
 
   getStatus(): Observable<any> {
-    console.log('try to get')
     return this.httpClient.get<any>(this.endpoint + '/status')
+      .pipe(
+        catchError(this.handleError<any>('error'))
+      )
+  }
+
+  sendHandling(): Observable<any> {
+    return  this.httpClient.post<any>(this.endpoint + '/handling', {})
       .pipe(
         catchError(this.handleError<any>('error'))
       )
