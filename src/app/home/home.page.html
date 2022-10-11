@@ -12,9 +12,57 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  status : {{ status }}
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  fall : {{ fall }} <hr>
+  idle : {{ idle }} <hr>
+  handling : {{ handling }}
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label>Alertes</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Profil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="map">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Paramètres</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
+
+<div *ngIf="fall && !handling">
+  <div class="my-overlay">
+    <ion-card class="urgenceOver">
+      <ion-card-header>
+        <ion-card-title style="color: black;">Boudette</ion-card-title>
+        <ion-card-subtitle>Chute a 16:45</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button shape="round" color="white" (click)="handleEmergency()">
+          <ion-icon name="close" color="danger"></ion-icon>
+        </ion-button>
+        <ion-list>
+          <ion-item-sliding>
+            <ion-item-options side="start">
+              <ion-item-option color="success" (click)="handleEmergency()" expandable>J'y vais</ion-item-option>
+            </ion-item-options>
+            <ion-item class="item-background-color">
+              <div>
+                >>> >>> >>>
+              </div>
+            </ion-item>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</div>
+
+
