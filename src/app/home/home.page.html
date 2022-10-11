@@ -1,39 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-content [fullscreen]="true" class="home-page">
   fall : {{ fall }} <hr>
   idle : {{ idle }} <hr>
   handling : {{ handling }}
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule">
-        <ion-icon name="notifications"></ion-icon>
-        <ion-label>Alertes</ion-label>
-        <ion-badge>6</ion-badge>
-      </ion-tab-button>
+
+  <div class="home-image">
+    <ion-img class="avatar-img" src="../../assets/images/avatar.webp"></ion-img>
+    <ion-img class="banc-img" src="../../assets/images/banc.png"></ion-img>
   
-      <ion-tab-button tab="speakers">
-        <ion-icon name="person-circle"></ion-icon>
-        <ion-label>Profil</ion-label>
-      </ion-tab-button>
+    <ion-img class="arbre-img" src="../../assets/images/arbre.png"></ion-img>
+    <ion-img class="pigeon-img" src="../../assets/images/pigeon.png"></ion-img>
   
-      <ion-tab-button tab="map">
-        <ion-icon name="map"></ion-icon>
-        <ion-label>Paramètres</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  </div>
+
+  <app-nav-bar></app-nav-bar>
+
+  
 </ion-content>
 
 <div *ngIf="fall && !handling">
