@@ -47,26 +47,24 @@
 <div *ngIf="fall && !handling">
   <div class="my-overlay">
     <ion-card class="urgenceOver">
-      <ion-card-header>
+      <ion-card-header mode="md">
         <ion-card-title style="color: black;">Boudette</ion-card-title>
         <ion-card-subtitle>Chute a 16:45</ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content>
-        <ion-button shape="round" color="white" (click)="handleEmergency()">
-          <ion-icon name="close" color="danger"></ion-icon>
+      <ion-card-content class="card-content">
+        <ion-button class="rounded-button" mode="md" fill="clear" size="medium" shape="round" (click)="handleEmergency()">
+          <ion-icon class="cross-icon" name="close" size="large" color="danger"></ion-icon>
         </ion-button>
-        <ion-list>
-          <ion-item-sliding>
-            <ion-item-options side="start">
-              <ion-item-option color="success" (click)="handleEmergency()" expandable>J'y vais</ion-item-option>
+    
+          <ion-item-sliding mode="md">
+            <ion-item-options  side="start">
+              <ion-item-option class="item-option-slide" (click)="handleEmergency()" expandable>J'y vais</ion-item-option>
             </ion-item-options>
-            <ion-item class="item-background-color">
-              <div>
+            <ion-item  class="item-slide" lines="none">
                 >>> >>> >>>
-              </div>
             </ion-item>
           </ion-item-sliding>
-        </ion-list>
+      
       </ion-card-content>
     </ion-card>
   </div>
