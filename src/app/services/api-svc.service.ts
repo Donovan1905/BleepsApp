@@ -31,6 +31,12 @@ export class ApiSvcService {
       )
   }
 
+  sendDecline(): Observable<any> { 
+    return this.httpClient.post<any>(this.endpoint + '/deline', {})
+      .pipe(
+        catchError(this.handleError<any>('error'))
+      )
+  }
   
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

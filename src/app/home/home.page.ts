@@ -37,13 +37,14 @@ export class HomePage {
   ngOnInit() {
     setInterval(() => {
       this.apiSvc.getStatus().subscribe((response) => {
-        this.fall = response['fall'];
-        this.idle = response['idle'];
-        this.handling = response['handling'];
+        this.fall = response['status']['fall'];
+        this.idle = response['status']['idle'];
+        this.handling = response['status']['handling'];
         console.log("fall " + this.fall);
         console.log("idle " + this.idle);
         console.log("handling " + this.handling);
       })
+      
       if (this.fall && !this.handling && !this.hasNotified) {
         this.id++;
         this.localNS.showLocalNotification(this.id, "Boudette est tombée", String(this.fall));
@@ -57,6 +58,12 @@ export class HomePage {
       console.log(response);
     })
     this.hasNotified = false;
+  }
+
+  declineErmergency() {
+    this.apiSvc.sendDecline().subscribe((response) => {
+      console.log(response);
+    })
   }
 
 }
