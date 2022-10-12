@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiSvcService } from '../services/api-svc.service';
+import { LocalNService } from '../services/local-n.service';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,8 @@ export class HomePage {
   idle: boolean;
   handling: boolean;
   overlayHidden: boolean = true;
+  id: number = 0;
+  hasNotified: boolean = false;
 
   bdd: any = {
     isHandled: false,
@@ -25,7 +28,7 @@ export class HomePage {
 
 
 
-  constructor(private apiSvc: ApiSvcService) {}
+  constructor(private apiSvc: ApiSvcService, private localNS: LocalNService) {}
 
   public hideOverlay() {
     this.overlayHidden = true;
@@ -41,6 +44,11 @@ export class HomePage {
         console.log("idle " + this.idle);
         console.log("handling " + this.handling);
       })
+      if (this.fall && !this.handling && !this.hasNotified) {
+        this.id++;
+        this.localNS.showLocalNotification(this.id, "Boudette est tombée", String(this.fall));
+        this.hasNotified = true;
+      }
     }, 2000)
   }
   
@@ -48,6 +56,7 @@ export class HomePage {
     this.apiSvc.sendHandling().subscribe((response) => {
       console.log(response);
     })
+    this.hasNotified = false;
   }
 
 }
