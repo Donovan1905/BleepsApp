@@ -27,6 +27,10 @@ const routes = [
         redirectTo: 'home',
         pathMatch: 'full'
     },
+    {
+        path: 'nfc',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_nfc_nfc_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./nfc/nfc.module */ 7356)).then(m => m.NfcPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -428,7 +432,7 @@ module.exports = webpackAsyncContext;
 /***/ ((module) => {
 
 "use strict";
-module.exports = ".app-page {\n  position: relative;\n  width: 393px;\n  height: 852px;\n  background: rgba(255, 255, 255, 0.91);\n  -webkit-backdrop-filter: blur(2px);\n          backdrop-filter: blur(2px);\n  /* Note: backdrop-filter has minimal browser support */\n  border-radius: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0YsWUFBQTtFQUNBLGFBQUE7RUFFQSxxQ0FBQTtFQUNBLGtDQUFBO1VBQUEsMEJBQUE7RUFDQSxzREFBQTtFQUVBLG1CQUFBO0FBREYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYWdle1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIHdpZHRoOiAzOTNweDtcclxuICBoZWlnaHQ6IDg1MnB4O1xyXG5cclxuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTEpO1xyXG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cigycHgpO1xyXG4gIC8qIE5vdGU6IGJhY2tkcm9wLWZpbHRlciBoYXMgbWluaW1hbCBicm93c2VyIHN1cHBvcnQgKi9cclxuXHJcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcclxufSJdfQ== */";
+module.exports = ".app-page {\n  position: relative;\n  width: 393px;\n  height: 852px;\n  background: rgba(255, 255, 255, 0.91);\n  -webkit-backdrop-filter: blur(2px);\n          backdrop-filter: blur(2px);\n  /* Note: backdrop-filter has minimal browser support */\n  border-radius: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuc2NzcyIsIi4uXFwuLlxcLi5cXC4uXFxCbGVlcHMlMjBBcHBcXEJsZWVwc0FwcFxcc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0YsWUFBQTtFQUNBLGFBQUE7RUFFQSxxQ0FBQTtFQUNBLGtDQUFBO1VBQUEsMEJBQUE7RUFDQSxzREFBQTtFQUVBLG1CQUFBO0FDREYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcC1wYWdle1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIHdpZHRoOiAzOTNweDtcclxuICBoZWlnaHQ6IDg1MnB4O1xyXG5cclxuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTEpO1xyXG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cigycHgpO1xyXG4gIC8qIE5vdGU6IGJhY2tkcm9wLWZpbHRlciBoYXMgbWluaW1hbCBicm93c2VyIHN1cHBvcnQgKi9cclxuXHJcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcclxufSIsIi5hcHAtcGFnZSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgd2lkdGg6IDM5M3B4O1xuICBoZWlnaHQ6IDg1MnB4O1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTEpO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoMnB4KTtcbiAgLyogTm90ZTogYmFja2Ryb3AtZmlsdGVyIGhhcyBtaW5pbWFsIGJyb3dzZXIgc3VwcG9ydCAqL1xuICBib3JkZXItcmFkaXVzOiAyMHB4O1xufSJdfQ== */";
 
 /***/ }),
 
@@ -439,7 +443,7 @@ module.exports = ".app-page {\n  position: relative;\n  width: 393px;\n  height:
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n\n<!-- Add navigation -->\n";
+module.exports = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n\r\n<!-- Add navigation -->\r\n";
 
 /***/ })
 
