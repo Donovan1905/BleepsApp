@@ -11,10 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'nfc',
-    loadChildren: () => import('./nfc/nfc.module').then( m => m.NfcPageModule)
-  },
 
 ];
 

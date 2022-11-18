@@ -16,6 +16,7 @@ export class HomePage {
   overlayHidden: boolean = true;
   id: number = 0;
   hasNotified: boolean = false;
+  currentUser: any = undefined;
 
   bdd: any = {
     isHandled: false,
@@ -44,7 +45,7 @@ export class HomePage {
         console.log("idle " + this.idle);
         console.log("handling " + this.handling);
       })
-      
+
       if (this.fall && !this.handling && !this.hasNotified) {
         this.id++;
         this.localNS.showLocalNotification(this.id, "Boudette est tombée", String(this.fall));
@@ -64,6 +65,10 @@ export class HomePage {
     this.apiSvc.sendDecline().subscribe((response) => {
       console.log(response);
     })
+  }
+
+  handleChange() {
+    
   }
 
 }
